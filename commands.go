@@ -10,6 +10,7 @@ func GetCommands(localChoices []*discordgo.ApplicationCommandOptionChoice) []*di
 		getAlignSlashCommand(),
 		getAlignUserCommand(),
 		getConfigSlashCommand(localChoices),
+		getItemSlashCommand(),
 		getJobSlashCommand(),
 		getJobUserCommand(),
 		getPosSlashCommand(),

@@ -16,13 +16,14 @@ const (
 	ConfigTwitterSubCommandName = "twitter"
 	ConfigYoutubeSubCommandName = "youtube"
 
-	ConfigServerOptionName   = "server"
-	ConfigChannelOptionName  = "channel"
-	ConfigFeedTypeOptionName = "type"
-	ConfigStreamerOptionName = "streamer"
-	ConfigVideastOptionName  = "videast"
-	ConfigLanguageOptionName = "language"
-	ConfigEnabledOptionName  = "enabled"
+	ConfigServerOptionName         = "server"
+	ConfigChannelOptionName        = "channel"
+	ConfigFeedTypeOptionName       = "type"
+	ConfigStreamerOptionName       = "streamer"
+	ConfigTwitterAccountOptionName = "twitterAccount"
+	ConfigVideastOptionName        = "videast"
+	ConfigLanguageOptionName       = "language"
+	ConfigEnabledOptionName        = "enabled"
 )
 
 //nolint:nolintlint,exhaustive,lll,dupl,funlen
@@ -200,13 +201,13 @@ func getConfigSlashCommand(localChoices []*discordgo.ApplicationCommandOptionCho
 						Required:                 true,
 					},
 					{
-						Name:                     ConfigLanguageOptionName,
-						Description:              "config.twitter.language.description",
-						NameLocalizations:        *i18n.GetLocalizations("config.twitter.language.name"),
-						DescriptionLocalizations: *i18n.GetLocalizations("config.twitter.language.description"),
-						Type:                     discordgo.ApplicationCommandOptionInteger,
-						Required:                 false,
-						Choices:                  localChoices,
+						Name:                     ConfigTwitterAccountOptionName,
+						Description:              "config.twitter.account.description",
+						NameLocalizations:        *i18n.GetLocalizations("config.twitter.account.name"),
+						DescriptionLocalizations: *i18n.GetLocalizations("config.twitter.account.description"),
+						Type:                     discordgo.ApplicationCommandOptionString,
+						Required:                 true,
+						Autocomplete:             true,
 					},
 					{
 						Name:                     ConfigChannelOptionName,

@@ -50,7 +50,7 @@ func getAlmanaxSlashCommand() *discordgo.ApplicationCommand {
 	almanaxDurationMinimumValue := AlmanaxDurationMinimumValue
 	return &discordgo.ApplicationCommand{
 		Name:                     AlmanaxCommandName,
-		Description:              "almanax.description",
+		Description:              i18n.GetDefault("almanax.description"),
 		Type:                     discordgo.ChatApplicationCommand,
 		DefaultMemberPermissions: constants.GetDefaultPermission(),
 		DMPermission:             constants.GetDMPermission(),
@@ -58,14 +58,14 @@ func getAlmanaxSlashCommand() *discordgo.ApplicationCommand {
 		Options: []*discordgo.ApplicationCommandOption{
 			{
 				Name:                     AlmanaxDaySubCommandName,
-				Description:              "almanax.day.description",
+				Description:              i18n.GetDefault("almanax.day.description"),
 				NameLocalizations:        *i18n.GetLocalizations("almanax.day.name"),
 				DescriptionLocalizations: *i18n.GetLocalizations("almanax.day.description"),
 				Type:                     discordgo.ApplicationCommandOptionSubCommand,
 				Options: []*discordgo.ApplicationCommandOption{
 					{
 						Name:                     AlmanaxDateOptionName,
-						Description:              "almanax.day.date.description",
+						Description:              i18n.GetDefault("almanax.day.date.description"),
 						NameLocalizations:        *i18n.GetLocalizations("almanax.day.date.name"),
 						DescriptionLocalizations: *i18n.GetLocalizations("almanax.day.date.description"),
 						Type:                     discordgo.ApplicationCommandOptionString,
@@ -75,14 +75,14 @@ func getAlmanaxSlashCommand() *discordgo.ApplicationCommand {
 			},
 			{
 				Name:                     AlmanaxResourcesSubCommandName,
-				Description:              "almanax.resources.description",
+				Description:              i18n.GetDefault("almanax.resources.description"),
 				NameLocalizations:        *i18n.GetLocalizations("almanax.resources.name"),
 				DescriptionLocalizations: *i18n.GetLocalizations("almanax.resources.description"),
 				Type:                     discordgo.ApplicationCommandOptionSubCommand,
 				Options: []*discordgo.ApplicationCommandOption{
 					{
 						Name:                     AlmanaxDurationOptionName,
-						Description:              "almanax.resources.duration.description",
+						Description:              i18n.GetDefault("almanax.resources.duration.description"),
 						NameLocalizations:        *i18n.GetLocalizations("almanax.resources.duration.name"),
 						DescriptionLocalizations: *i18n.GetLocalizations("almanax.resources.duration.description"),
 						Type:                     discordgo.ApplicationCommandOptionInteger,
@@ -94,14 +94,14 @@ func getAlmanaxSlashCommand() *discordgo.ApplicationCommand {
 			},
 			{
 				Name:                     AlmanaxEffectsSubCommandName,
-				Description:              "almanax.effects.description",
+				Description:              i18n.GetDefault("almanax.effects.description"),
 				NameLocalizations:        *i18n.GetLocalizations("almanax.effects.name"),
 				DescriptionLocalizations: *i18n.GetLocalizations("almanax.effects.description"),
 				Type:                     discordgo.ApplicationCommandOptionSubCommand,
 				Options: []*discordgo.ApplicationCommandOption{
 					{
 						Name:                     AlmanaxEffectOptionName,
-						Description:              "almanax.effects.effect.description",
+						Description:              i18n.GetDefault("almanax.effects.effect.description"),
 						NameLocalizations:        *i18n.GetLocalizations("almanax.effects.effect.name"),
 						DescriptionLocalizations: *i18n.GetLocalizations("almanax.effects.effect.description"),
 						Type:                     discordgo.ApplicationCommandOptionString,

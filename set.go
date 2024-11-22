@@ -29,7 +29,7 @@ var (
 func getSetSlashCommand() *discordgo.ApplicationCommand {
 	return &discordgo.ApplicationCommand{
 		Name:                     SetCommandName,
-		Description:              "set.description",
+		Description:              i18n.GetDefault("set.description"),
 		Type:                     discordgo.ChatApplicationCommand,
 		DefaultMemberPermissions: constants.GetDefaultPermission(),
 		DMPermission:             constants.GetDMPermission(),
@@ -37,7 +37,7 @@ func getSetSlashCommand() *discordgo.ApplicationCommand {
 		Options: []*discordgo.ApplicationCommandOption{
 			{
 				Name:                     SetQueryOptionName,
-				Description:              "set.query.description",
+				Description:              i18n.GetDefault("set.query.description"),
 				NameLocalizations:        *i18n.GetLocalizations("set.query.name"),
 				DescriptionLocalizations: *i18n.GetLocalizations("set.query.description"),
 				Type:                     discordgo.ApplicationCommandOptionString,

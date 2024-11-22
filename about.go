@@ -14,7 +14,7 @@ const (
 func getAboutSlashCommand() *discordgo.ApplicationCommand {
 	return &discordgo.ApplicationCommand{
 		Name:                     AboutCommandName,
-		Description:              "about.description",
+		Description:              i18n.GetDefault("about.description"),
 		Type:                     discordgo.ChatApplicationCommand,
 		DefaultMemberPermissions: constants.GetDefaultPermission(),
 		DMPermission:             constants.GetDMPermission(),

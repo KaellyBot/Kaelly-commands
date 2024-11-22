@@ -25,7 +25,7 @@ var (
 func getHelpSlashCommand() *discordgo.ApplicationCommand {
 	return &discordgo.ApplicationCommand{
 		Name:                     HelpCommandName,
-		Description:              "help.description",
+		Description:              i18n.GetDefault("help.description"),
 		Type:                     discordgo.ChatApplicationCommand,
 		DefaultMemberPermissions: constants.GetDefaultPermission(),
 		DMPermission:             constants.GetDMPermission(),

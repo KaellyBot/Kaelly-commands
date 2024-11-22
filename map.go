@@ -33,7 +33,7 @@ func getMapSlashCommand() *discordgo.ApplicationCommand {
 	var mapNumberMin float64 = MapNumberMin
 	return &discordgo.ApplicationCommand{
 		Name:                     MapCommandName,
-		Description:              "map.description",
+		Description:              i18n.GetDefault("map.description"),
 		Type:                     discordgo.ChatApplicationCommand,
 		DefaultMemberPermissions: constants.GetDefaultPermission(),
 		DMPermission:             constants.GetDMPermission(),
@@ -41,7 +41,7 @@ func getMapSlashCommand() *discordgo.ApplicationCommand {
 		Options: []*discordgo.ApplicationCommandOption{
 			{
 				Name:                     MapNumberOptionName,
-				Description:              "map.number.description",
+				Description:              i18n.GetDefault("map.number.description"),
 				NameLocalizations:        *i18n.GetLocalizations("map.number.name"),
 				DescriptionLocalizations: *i18n.GetLocalizations("map.number.description"),
 				Type:                     discordgo.ApplicationCommandOptionInteger,

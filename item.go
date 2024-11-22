@@ -31,7 +31,7 @@ var (
 func getItemSlashCommand() *discordgo.ApplicationCommand {
 	return &discordgo.ApplicationCommand{
 		Name:                     ItemCommandName,
-		Description:              "item.description",
+		Description:              i18n.GetDefault("item.description"),
 		Type:                     discordgo.ChatApplicationCommand,
 		DefaultMemberPermissions: constants.GetDefaultPermission(),
 		DMPermission:             constants.GetDMPermission(),
@@ -39,7 +39,7 @@ func getItemSlashCommand() *discordgo.ApplicationCommand {
 		Options: []*discordgo.ApplicationCommandOption{
 			{
 				Name:                     ItemQueryOptionName,
-				Description:              "item.query.description",
+				Description:              i18n.GetDefault("item.query.description"),
 				NameLocalizations:        *i18n.GetLocalizations("item.query.name"),
 				DescriptionLocalizations: *i18n.GetLocalizations("item.query.description"),
 				Type:                     discordgo.ApplicationCommandOptionString,
